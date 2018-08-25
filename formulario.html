@@ -7,19 +7,34 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Registration Form</h1>
+    <form action="#" metho="Post">
+        <h1>Registration Form</h1>
 
-    <fieldset>
-        <legend>Personal Information</legend>
-        <label>Name</label> <input type="text" required pattern="[a-zA-Z]">
-        <label>Date of Birth</label> <input type="date" required>
-        <label >Favorite Animal</label> <input type="text" pattern="[a-zA-Z]">
-    </fieldset>
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label>Name</label> <input type="text" required pattern="[a-zA-Z]{1,10}">
+            <label>Date of Birth</label> <input type="date" required>
+            <label >Favorite Animal</label> <input type="text" pattern="[a-zA-Z]{1,10}" placeholder="Leon">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Account</legend>
+            <label>email</label> <input type="text" required>
+            <label >Password</label> <input type="password" pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\S+$).{6,}$">
+            <label>Verify Password</label> <input type="password" pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\S+$).{6,}$">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Contact</legend>
+            <label>address</label> <input type="text" required>
+            <label>City</label> <input type="text" required pattern="[a-zA-Z]{1,20}" placeholder="Santa Tecla">
+            <label>Country</label> <input type="text" required pattern="[a-zA-Z]{1,20}" placeholder="El Salvador">
+            <label>Phone Number</label> <input type="text" required pattern="[0-9]{8}" placeholder="78596324">
 
-    <fieldset>
-        <legend>Account</legend>
-        <label>email</label> <input type="text" required>
-        <label >Password</label>
-    </fieldset>
+        </fieldset>
+        <br>
+        <input type="submit" value="Send">
+
+    </form>
 </body>
 </html>
